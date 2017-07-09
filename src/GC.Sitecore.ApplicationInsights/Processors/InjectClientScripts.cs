@@ -9,8 +9,8 @@ namespace GC.Sitecore.ApplicationInsights.Processors
         {
             var page = Context.Page;
 
-            page?.Page.ClientScript.RegisterStartupScript(this.GetType(), "ApplicationInsightsKey", $"var myIKey = \"{Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration.Active.InstrumentationKey}\";", true);
-            page?.Page.ClientScript.RegisterStartupScript(this.GetType(), "ApplicationInsightsScript", "<script type=\"text/javascript\" src=\"" + page?.Page.ResolveUrl("~/AIClientScript.js") + "\"></script>", false);
+            page?.Page.ClientScript.RegisterStartupScript(this.GetType(), "ApplicationInsightsKey", Scripts.KeyScript, false);
+            page?.Page.ClientScript.RegisterStartupScript(this.GetType(), "ApplicationInsightsScript", Scripts.ClientScript , false);
 
         }
     }

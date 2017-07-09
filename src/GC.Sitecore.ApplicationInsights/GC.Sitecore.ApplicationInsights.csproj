@@ -124,10 +124,11 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ApplicationInsightsExtensions.cs" />
     <Compile Include="Processors\InitializeApplicationInsights.cs" />
-    <Compile Include="Processors\InjectClientScriptsMvc.cs" />
     <Compile Include="Processors\InjectClientScripts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
