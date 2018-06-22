@@ -1,14 +1,14 @@
 ﻿using Sitecore.Pipelines;
 
-namespace GC.Sitecore.ApplicationInsights.Processors
+namespace Ignition.Foundation.Telemetry.ApplicationInsights.Processors
 {
     public class InitializeApplicationInsights
     {
         public void Process(PipelineArgs args)
         {
-            global::Sitecore.Diagnostics.Assert.ArgumentNotNull(args, "args");
+            Sitecore.Diagnostics.Assert.ArgumentNotNull(args, "args");
 
-            var key = global::Sitecore.Configuration.Settings.GetSetting("applicationInsightsInstrumentationKey");
+            var key = Sitecore.Configuration.Settings.GetSetting("applicationInsightsInstrumentationKey");
 
             if (string.IsNullOrEmpty(key))
             {

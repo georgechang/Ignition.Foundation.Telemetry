@@ -1,13 +1,12 @@
-﻿using Sitecore;
-using Sitecore.Pipelines.RenderLayout;
+﻿using Sitecore.Pipelines.RenderLayout;
 
-namespace GC.Sitecore.ApplicationInsights.Processors
+namespace Ignition.Foundation.Telemetry.ApplicationInsights.Processors
 {
     public class InjectClientScripts : RenderLayoutProcessor
     {
         public override void Process(RenderLayoutArgs args)
         {
-            var page = Context.Page;
+            var page = Sitecore.Context.Page;
 
             page?.Page.ClientScript.RegisterStartupScript(this.GetType(), "ApplicationInsightsKey", Scripts.KeyScript, false);
             page?.Page.ClientScript.RegisterStartupScript(this.GetType(), "ApplicationInsightsScript", Scripts.ClientScript , false);

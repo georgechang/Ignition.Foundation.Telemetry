@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Sitecore;
-using Sitecore.Layouts;
+﻿using System.Web;
 
-namespace GC.Sitecore.ApplicationInsights
+namespace Ignition.Foundation.Telemetry.ApplicationInsights
 {
     public static class Scripts
     {
